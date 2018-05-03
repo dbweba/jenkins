@@ -12,14 +12,6 @@ pipeline {
       }
     }
   }
-  stage('Deploy') {
-      input {
-        message "Should we continue?"
-      }
-      steps {
-        echo "Continuing with deployment"
-      }
-    }
   environment {
     MY_NAME = 'Mary'
     TEST_USER = credentials('test-user')
@@ -28,4 +20,3 @@ pipeline {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
 }
-
