@@ -1,4 +1,7 @@
 pipeline {
+  environment {
+      MY_NAME = 'Mary'
+   }
   agent {
     label 'jdk9'
   }
